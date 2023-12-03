@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Array_functions.cpp">
+    <ClCompile Include="Array_functions.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

@@ -106,7 +106,7 @@ int main()
         arrayX[i] = rand() % 20 - 10;
     }
     
-    printf("\nX:\n");
+    printf("\nМассив X:\n");
     print(lengthOfX, arrayX);
     printf("\n");
     int* arrayY = calloc(lengthOfY, sizeof(int));
@@ -114,21 +114,21 @@ int main()
     {
         arrayY[i] = rand() % 20 - 10;
     }
-    printf("\nY:\n");
+    printf("\nМассив Y:\n");
     print(lengthOfY, arrayY);
 
     int a1x = sumOfAll(lengthOfX, arrayX); 
 
     if (a1x < 0)
     {
-        int a2x = sumOfPositives(lengthOfX, arrayX);//A2(x)
+        int a2x = sumOfPositives(lengthOfX, arrayX);
         int a4x = countOfZeros(lengthOfX, arrayX);
         int m1x = lesserThan(lengthOfX, arrayX, a1x);
         int a2y = sumOfPositives(lengthOfY, arrayY);
         float z1 = (a2x + 2.8 * pow(10, -3) * a4x) / (0.3 + m1x * a2y);
         printf("\nz1 = %lf", &z1);
     }
-    else printf("\nОшибка: A1(X) >= 0");
+    else printf("\nНе было выполнено условие: A1(X) < 0");
 
     if (a1x >= 0)
     {
@@ -139,7 +139,7 @@ int main()
         printf("\nz2 = %lf", &z2);
 
     }
-    else printf("\nОшибка: A1(X) < 0");
+    else printf("\nНе было выполнено условие: A1(X) >= 0");
 
     free(arrayX);
     free(arrayY);
